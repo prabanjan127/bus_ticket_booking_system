@@ -101,7 +101,7 @@
 								</div>
 								<div class="col-14 mt-15 mb-15">
 									<hr>
-									<div class="col-md-8 mt-sm-30">
+									<!-- <div class="col-md-8 mt-sm-30">
 										<h3 class="mb-20">PAYMENT GUIDE</h3>
 										<div class="">
 											<ol class="ordered-list" align="left">
@@ -117,7 +117,7 @@
 												<li>Take your ATM Card</li>
 											</ol>
 										</div>
-									</div>
+									</div> -->
 								</div>
 								<a href="<?= base_url('tiket/konfirmasi/'.$tiket[0]['kd_order'].'/'.$total) ?>" class="btn btn-primary pull-center">Submit for Payment Confirmation </a>
 							</div>

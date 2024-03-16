@@ -40,10 +40,7 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<div class="modal-body">
-				[ ] with ❤ in Jakarta/Cengkareng <br>
-				By Bahyu Sanciko
-			</div>
+			
 			<div class="modal-footer">
 				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 			</div>
