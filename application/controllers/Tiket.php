@@ -37,7 +37,7 @@ class Tiket extends CI_Controller {
 		$data['jadwal'] = $this->db->query("SELECT * FROM tbl_jadwal LEFT JOIN tbl_bus on tbl_jadwal.kd_bus = tbl_bus.kd_bus LEFT JOIN tbl_tujuan on tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan WHERE tbl_jadwal.wilayah_jadwal ='$tujuan' AND tbl_jadwal.kd_asal = '$asal'")->result_array();
 		if (!empty($data['jadwal'])) {
 			if ($tujuan == $data['asal']['kota_tujuan']) {
-				$this->session->set_flashdata('message', 'swal("Cek", "Tujuan dan Asal tidak boleh sama", "error");');
+				// $this->session->set_flashdata('message', 'swal("Cek", "Tujuan dan Asal tidak boleh sama", "error");');
     			redirect('tiket');
 			}else{
 				for ($i=0; $i < count($data['jadwal']); $i++) { 
@@ -46,7 +46,7 @@ class Tiket extends CI_Controller {
 				$this->load->view('frontend/cekjadwal',$data);
 			}
 		}else{
-			$this->session->set_flashdata('message', 'swal("Empty", "No Schedule", "error");');
+			// $this->session->set_flashdata('message', 'swal("Empty", "No Schedule", "error");');
     		redirect('tiket');
 		}
 	}
@@ -80,7 +80,7 @@ class Tiket extends CI_Controller {
 		if ($data['kursi']) {
 			$this->load->view('frontend/beli_step2', $data);
 		}else{
-			$this->session->set_flashdata('message', 'swal("Empty", "Choose Your Seat", "error");');
+			// $this->session->set_flashdata('message', 'swal("Empty", "Choose Your Seat", "error");');
 			redirect('tiket/beforebeli/'.$data['asal'].'/'.$data['kd_jadwal']);
 		}
 	}
@@ -144,7 +144,7 @@ class Tiket extends CI_Controller {
 			$data['count'] = count($sqlcek);
 			$this->load->view('frontend/payment',$data);
 		}else{
-			$this->session->set_flashdata('message', 'swal("Empty", "No Pending Tickets Found", "error");');
+			// $this->session->set_flashdata('message', 'swal("Empty", "No Pending Tickets Found", "error");');
     		redirect('tiket/cektiket');
 		}
 	}
@@ -180,11 +180,11 @@ class Tiket extends CI_Controller {
         $this->email->subject($subject);
         $this->email->message($message);
         if ($this->email->send()) {
-			$this->session->set_flashdata('message', 'swal("Success", "Please proceed towards payment confirmation!", "success");');
+			// $this->session->set_flashdata('message', 'swal("Success", "Please proceed towards payment confirmation!", "success");');
             $this->load->view('frontend/checkout', $data);
         } else {
 		//    echo 'Error! Send an error email';
-		$this->session->set_flashdata('message', 'swal("Success", "Please proceed towards payment confirmation!", "success");');
+		// $this->session->set_flashdata('message', 'swal("Success", "Please proceed towards payment confirmation!", "success");');
             $this->load->view('frontend/checkout', $data);
         }
 	}
@@ -193,7 +193,7 @@ class Tiket extends CI_Controller {
 		$id = $this->input->post('kodetiket');
 		$sqlcek = $this->db->query("SELECT * FROM tbl_order LEFT JOIN tbl_bus on tbl_order.kd_bus = tbl_bus.kd_bus LEFT JOIN tbl_jadwal on tbl_order.kd_jadwal = tbl_jadwal.kd_jadwal WHERE kd_order ='".$id."'")->result_array();
 		if ($sqlcek == NULL) {
-			$this->session->set_flashdata('message', 'swal("Kosong", "Tidak Ada Tiket", "error");');
+			// $this->session->set_flashdata('message', 'swal("Kosong", "Tidak Ada Tiket", "error");');
     		redirect('tiket/cektiket');
 		}else{
 			$data['tiket'] = $sqlcek;
@@ -213,7 +213,7 @@ class Tiket extends CI_Controller {
 		$this->load->library('upload', $config);
 		if ( ! $this->upload->do_upload('userfile')){
 			$error = array('error' => $this->upload->display_errors());
-			$this->session->set_flashdata('message', 'swal("Fail", "Check Your Confirmation Again", "error");');
+			// $this->session->set_flashdata('message', 'swal("Fail", "Check Your Confirmation Again", "error");');
 			redirect('tiket/konfirmasi/'.$this->input->post('kd_order').'/'.$this->input->post('total'));
 		}
 		else{
@@ -229,7 +229,7 @@ class Tiket extends CI_Controller {
 						'photo_konfirmasi' => $featured_image
 					);
 			$this->db->insert('tbl_konfirmasi', $data);
-			$this->session->set_flashdata('message', 'swal("Success", "Thank you. Please wait for the verification!", "success");');
+			// $this->session->set_flashdata('message', 'swal("Success", "Thank you. Please wait for the verification!", "success");');
 			redirect('profile/tiketsaya/'.$this->session->userdata('kd_pelanggan'));
 		}
 	}
