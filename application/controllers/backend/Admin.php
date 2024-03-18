@@ -56,7 +56,7 @@ class Admin extends CI_Controller {
 				'date_create_admin' => time()
 				 );
 			$this->db->insert('tbl_admin', $data);
-			$this->session->set_flashdata('message', 'swal("Succeed", "Successfully Added Account", "success");');
+			// $this->session->set_flashdata( 'swal("Succeed", "Successfully Added Account", "success");');
     		redirect('backend/admin');
 		}
 

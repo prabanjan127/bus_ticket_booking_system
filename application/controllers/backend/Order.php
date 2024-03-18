@@ -32,7 +32,7 @@ class Order extends CI_Controller {
 			// die(print_r($sqlcek));
 			$this->load->view('backend/view_order',$data);
 	 	}else{
-	 		$this->session->set_flashdata('message', 'swal("Empty", "No Order", "error");');
+	 		// $this->session->set_flashdata('message', 'swal("Empty", "No Order", "error");');
     		redirect('backend/tiket');
 	 	}
 	}
@@ -73,7 +73,7 @@ class Order extends CI_Controller {
 			);
 		$this->db->insert('tbl_tiket', $simpan);
 		}
-		$this->session->set_flashdata('message', 'swal("Succeed", "Ticket Order Processed Successfully", "success");');
+		// $this->session->set_flashdata('message', 'swal("Succeed", "Ticket Order Processed Successfully", "success");');
 		redirect('backend/order');
 
 		
@@ -109,10 +109,10 @@ class Order extends CI_Controller {
         $this->email->subject($subject);
         $this->email->message($message);
         if ($this->email->send()) {
-        	$this->session->set_flashdata('message', 'swal("Succeed", "E-Ticket sent!", "success");');
+        	// $this->session->set_flashdata('message', 'swal("Succeed", "E-Ticket sent!", "success");');
 			redirect('backend/order/vieworder/'.$id);
         } else {
-            $this->session->set_flashdata('message', 'swal("Failed", "E-Tickets Failed to Send Contact the IT Team", "error");');
+            // $this->session->set_flashdata('message', 'swal("Failed", "E-Tickets Failed to Send Contact the IT Team", "error");');
 			redirect('backend/order/vieworder/'.$id);
         }
 

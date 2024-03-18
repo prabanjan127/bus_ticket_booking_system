@@ -26,7 +26,7 @@ class Profile extends CI_Controller {
 			'telpon_pelanggan'		=> $this->input->post('hp'),
 			 );
 		$this->db->update('tbl_pelanggan', $update,$where);
-		$this->session->set_flashdata('message', 'swal("Success", "Data Edited", "success");');
+		// $this->session->set_flashdata('message', 'swal("Success", "Data Edited", "success");');
 		redirect('profile/profilesaya/'.$id);
 	}
 	public function tiketsaya($id=''){
@@ -74,7 +74,7 @@ class Profile extends CI_Controller {
 				'password_pelanggan'			=> $password_hash,
 				 );
 				$this->db->update('tbl_pelanggan', $update,$where);
-				$this->session->set_flashdata('message', 'swal("Success", "Your password has been changed successfully", "success");');
+				// $this->session->set_flashdata('message', 'swal("Success", "Your password has been changed successfully", "success");');
 				redirect('profile/profilesaya/'.$id);
 			}
 		}

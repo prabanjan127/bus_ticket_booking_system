@@ -113,7 +113,7 @@ class Login extends CI_Controller {
 			$this->db->insert('tbl_pelanggan', $data);
 			$this->db->insert('tbl_token_pelanggan', $data1);
 			$this->_sendmail($token,'verify');
-			$this->session->set_flashdata('message', 'swal("Success", "Successfully Registered. Welcome to BTBS!", "success");');
+			// $this->session->set_flashdata('message', 'swal("Success", "Successfully Registered. Welcome to BTBS!", "success");');
     		redirect('login');
 		}
 
@@ -206,7 +206,7 @@ class Login extends CI_Controller {
 				 );
 			$this->db->insert('tbl_token_pelanggan', $data);
 			$this->_sendmail($token,'forgot');
-			$this->session->set_flashdata('message', 'swal("Success", "Successfully Reset Password Please Check Your Email", "success");');
+			// $this->session->set_flashdata('message', 'swal("Success", "Successfully Reset Password Please Check Your Email", "success");');
     		redirect('login');
 			}else{
 				$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">

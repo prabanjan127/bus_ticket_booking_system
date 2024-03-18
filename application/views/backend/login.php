@@ -73,7 +73,7 @@
 	</div>
 
 	<!-- Bootstrap core JavaScript-->
-	<?= "<script>".$this->session->flashdata('message')."</script>"?>
+	<!-- <?= "<script>".$this->session->flashdata('message')."</script>"?> -->
 	<script src="<?= base_url() ?>assets/backend/vendor/jquery/jquery.min.js"></script>
 	<script src="<?= base_url() ?>assets/backend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

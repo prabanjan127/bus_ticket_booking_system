@@ -29,7 +29,7 @@ class Konfirmasi extends CI_Controller {
 	 $sqlcek = $this->db->query("SELECT * FROM tbl_konfirmasi WHERE kd_order ='".$id."'")->result_array();
 	 $data['title'] = "View Confirmation";
 	 if ($sqlcek == NULL) {
-	 	$this->session->set_flashdata('message', 'swal("Empty", "Payments info not received yet!", "error");');
+	 	// $this->session->set_flashdata('message', 'swal("Empty", "Payments info not received yet!", "error");');
 		redirect('backend/order/vieworder/'.$id);
 	 }else{		
 		$data['konfirmasi'] = $sqlcek;

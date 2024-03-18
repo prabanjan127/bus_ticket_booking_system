@@ -20,7 +20,7 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="<?php echo base_url() ?>assets/frontend/select2/js/select2.min.js"></script>
 <script src="<?php echo base_url() ?>assets/datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<?php echo "<script>".$this->session->flashdata('message')."</script>"?>
+<!-- <?php echo "<script>".$this->session->flashdata('message')."</script>"?> -->
 <!--Start of Tawk.to Script-->
 
 

@@ -75,7 +75,7 @@ class Login extends CI_Controller {
         redirect('backend/home');
         // }
     }else{
-    	$this->session->set_flashdata('message', 'swal("Failed", "Incorrect Login Details!", "error");');
+    	// $this->session->set_flashdata('message', 'swal("Failed", "Incorrect Login Details!", "error");');
     	redirect('backend/login');
     	}
 	}
