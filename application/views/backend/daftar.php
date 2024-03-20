@@ -13,7 +13,72 @@
 		href="<?= base_url('assets/frontend/timepicker') ?>/css/bootstrap-material-datetimepicker.css" />
 	<?php $this->load->view('backend/include/base_css'); ?>
 </head>
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
+class Backend extends CI_Controller {
+
+    public function __construct() {
+        parent::__construct();
+        $this->load->model('admin_model');
+        $this->load->helper('url');
+        $this->load->library('form_validation');
+    }
+
+    public function add_admin() {
+        // Form validation rules
+        $this->form_validation->set_rules('name', 'Name', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+        $this->form_validation->set_rules('username', 'Username', 'trim|required');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required');
+        $this->form_validation->set_rules('password2', 'Repeat Password', 'trim|required|matches[password]');
+        $this->form_validation->set_rules('level', 'Level', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+            // Form validation failed, reload the form
+            $this->load->view('backend/add_admin');
+        } else {
+            // Form validation passed, insert data into the database
+            $data = array(
+                'name' => $this->input->post('name'),
+                'email' => $this->input->post('email'),
+                'username' => $this->input->post('username'),
+                'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+                'level' => $this->input->post('level')
+            );
+
+            // Insert data into the database
+            $this->admin_model->add_admin($data);
+
+            // Redirect to a confirmation page
+            redirect('backend/admin_added');
+        }
+    }
+
+    public function admin_added() {
+        $this->load->view('backend/admin_added');
+    }
+
+    // Other methods in your controller...
+}
+?>
+<?php
+
+class Admin_model extends CI_Model {
+
+    public function __construct() {
+        parent::__construct();
+        $this->load->database();
+    }
+
+    public function add_admin($data) {
+        $this->db->insert('tbl_admin', $data);
+    }
+
+    // Other methods in your model...
+}
+?>
 <body id="page-top">
 	<!-- navbar -->
 	<?php $this->load->view('backend/include/base_nav'); ?>
@@ -30,7 +95,7 @@
 				<div class="card-body">
 					<div class="row">
 						<div class="col-sm-12">
-							<form class="user" method="post" action="<?= base_url('backend/login/daftar') ?>">
+							<form class="user" method="post" action="<?= base_url('backend/confirm') ?>">
 								<div class="form-group">
 									<input type="text" class="form-control form-control-user" id="exampleFirstName" name="name"
 										value="<?= set_value('name') ?>" placeholder="Full Name">
@@ -80,6 +145,8 @@
 		<!-- End of Footer -->
 		<!-- js -->
 		<?php $this->load->view('backend/include/base_js'); ?>
+
+		
 
 </body>
 
