@@ -210,7 +210,7 @@ abstract class CI_DB_driver {
 	 * Queries list
 	 *
 	 * @see	CI_DB_driver::$save_queries
-	 * @var	string[]
+	 * @var	string[]	
 	 */
 	public $queries			= array();
 
