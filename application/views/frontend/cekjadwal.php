@@ -15,7 +15,7 @@
 		<meta charset="UTF-8">
 		<!-- Log on to codeastro.com for more projects -->
 		<!-- Site Title -->
-		<title>BUS TICKET BOOKING</title>
+		<title>Smart Ride Connect</title>
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 		<!--CSS-->
 		<?php $this->load->view('frontend/include/base_css'); ?>
@@ -39,7 +39,7 @@
 									<thead class="thead-dark">
 										<tr>
 											<th scope="col">Route [Schedule Code]</th>
-											<th>Destination Terminal</th>
+											<!-- <th>Destination Terminal</th> -->
 											<th scope="col">Date & Time</th>
 											<th scope="col">Seats</th>
 											<th>Price</th>
@@ -50,7 +50,7 @@
 										<?php for ($i=0; $i < count($jadwal)  ; $i++) { ?>
 										<tr>
 											<td><?php echo strtoupper($asal['kota_tujuan'])." - ".strtoupper($jadwal[$i]['kota_tujuan'])." [".$jadwal[$i]['kd_jadwal']."]"; ?></td>
-											<td><?php echo $jadwal[$i]['terminal_tujuan'] ?></td>
+											<!-- <td><?php echo $jadwal[$i]['terminal_tujuan'] ?></td> -->
 											<td><?php echo hari_indo(date('N',strtotime($tanggal))).', '.tanggal_indo(date('Y-m-d',strtotime(''.$tanggal.''))).', '.date('H:i',strtotime($jadwal[$i]['jam_berangkat_jadwal'])); ?></td>
 											<td><?php echo $jadwal[$i]['kapasitas_bus']-$kursi[$i][0]['count(no_kursi_order)'] ?></td>
 											<td>$<?php echo number_format((float)($jadwal[$i]['harga_jadwal']),0,",","."); ?></td>

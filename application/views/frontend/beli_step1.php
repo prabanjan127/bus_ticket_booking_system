@@ -15,7 +15,7 @@
 		<meta charset="UTF-8">
 		<!-- Log on to codeastro.com for more projects -->
 		<!-- Site Title -->
-		<title>BUS TICKET BOOKING</title>
+		<title>Smart Ride Connect</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
@@ -40,8 +40,8 @@
 									<li>► Destination <b><?php echo $asal['kota_tujuan']." - ".$jadwal['kota_tujuan']." [".$jadwal['kd_jadwal']."]"; ?></b></li>
 									<li>► Name of Bus  <b><?php echo $jadwal['nama_bus'];  ?></b></li>
 									<li>► Bus Number  <b><?php echo $jadwal['plat_bus'];  ?></b></li>
-									<li>► Departure <b><?php echo strtoupper($asal['kota_tujuan'])." - ".$asal['terminal_tujuan']; ?></b></li>
-									<li>► Arrival <b><?php echo strtoupper($jadwal['kota_tujuan'])." - ".$jadwal['terminal_tujuan']; ?></b></li>
+									<li>► Departure <b><?php echo strtoupper($asal['kota_tujuan']) ?></b></li>
+									<li>► Arrival <b><?php echo strtoupper($jadwal['kota_tujuan']) ?></b></li>
 									<li>► Prices: <b>$<?php echo number_format((float)($jadwal['harga_jadwal']),0,",",".") ; ?></b></li>
 									<li>► Depart Date <b><?php echo nama_hari($tanggal).",".tgl_indo($tanggal) ?></b></li>
 									<li>► Depart. Time <b>at <?php echo $jadwal['jam_berangkat_jadwal']; ?></b></li>

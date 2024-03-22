@@ -116,8 +116,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
               <div class="row">
                 <div class="col-sm-6">
                   <p>Bus     : <b> <?= $jadwal['kd_bus']." [".$jadwal['nama_bus'].'-'.$jadwal['plat_bus'] ?>]</b></p>
-                  <p>Origin :  <b><?= strtoupper($asal['kota_tujuan'])." - ".$asal['terminal_tujuan']; ?></b></p>
-                  <p>Destination  : <b><?= strtoupper($jadwal['kota_tujuan'])." - ".$jadwal['terminal_tujuan']; ?></b></p>
+                  <!-- <p>Origin :  <b><?= strtoupper($asal['kota_tujuan'])." - ".$asal['terminal_tujuan']; ?></b></p> -->
+                  <!-- <p>Destination  : <b><?= strtoupper($jadwal['kota_tujuan'])." - ".$jadwal['terminal_tujuan']; ?></b></p> -->
                   <p>Departure    : <b><?= date('H:i',strtotime($jadwal['jam_berangkat_jadwal'])) ?></b></p>
                   <p>Arrival : <b><?= date('H:i',strtotime($jadwal['jam_tiba_jadwal'])) ?></b></p>
                   <p>Schedule Price : <b>$<?= $jadwal['harga_jadwal']; ?></b></p>

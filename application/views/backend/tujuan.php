@@ -15,7 +15,7 @@
     <?php $this->load->view('backend/include/base_nav'); ?>
     <!-- Begin Page Content -->
     <div class="container-fluid">
-      <h1 class="h5 text-gray-800">Destination/Terminal Management</h1>
+      <h1 class="h5 text-gray-800">Destination</h1>
       <!-- DataTales Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -31,7 +31,7 @@
                   <th>#</th>
                   <th>Code</th>
                   <th>Destination City</th>
-                  <th>Terminal Info</th>
+                  <!-- <th>Terminal Info</th> -->
                   <th>Action</th>
                 </tr>
               </thead>
@@ -41,7 +41,7 @@
                   <td><?= $i++; ?></td>
                   <td><?= $row['kd_tujuan']; ?></td>
                   <td><?= strtoupper($row['kota_tujuan']); ?></td>
-                  <td><?=  substr($row['terminal_tujuan'], 0, 15); ?></td>
+                  <!-- <td><?=  substr($row['terminal_tujuan'], 0, 15); ?></td> -->
                   <td align="center"><a href="<?= base_url('backend/rute/viewrute/'.$row['kd_tujuan']) ?>" class="btn btn-info">View</a></td>
                 </tr>
                 <?php } ?>

@@ -55,8 +55,7 @@
 										<option value="" selected disabled="">Choose Origin</option>
 										<?php foreach ($asal as $row ) { ?>
 										<option value="<?php echo $row['kd_tujuan'] ?>">
-											<?php echo strtoupper($row['kota_tujuan']) ?>
-											- <br><?php echo $row['terminal_tujuan']; ?> </option>
+											<?php echo strtoupper($row['kota_tujuan']) ?> </option>
 										<?php } ?>
 									</select>
 								</div>
@@ -86,7 +85,7 @@
 								<thead>
 									<tr>
 										<th style="text-align:center;">City</th>
-										<th>Terminal</th>
+										<!-- <th>Terminal</th> -->
 									</tr>
 								</thead>
 								<tbody>
@@ -94,7 +93,7 @@
 									<tr>
 										<td style="text-align:center;vertical-align:middle">
 											<?php echo strtoupper($value['kota_tujuan']) ?></td>
-										<td style="vertical-align:middle;"><?php echo $value['terminal_tujuan'] ?></td>
+										<!-- <td style="vertical-align:middle;"><?php echo $value['terminal_tujuan'] ?></td> -->
 									</tr>
 									<?php } ?>
 								</tbody>

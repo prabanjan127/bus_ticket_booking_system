@@ -1,7 +1,7 @@
 <footer class="sticky-footer bg-white">
 	<div class="container my-auto">
 		<div class="copyright text-center my-auto">
-			<span>&copy; <?= date('Y') ?> Bus Ticket Booking System </span>
+			<span>&copy; <?= date('Y') ?> Smart Ride Connect </span>
 		</div>
 	</div>
 </footer>

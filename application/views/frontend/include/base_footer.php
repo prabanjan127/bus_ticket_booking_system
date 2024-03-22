@@ -3,9 +3,9 @@
 					<div class="row">
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h4 class="text-white">Bus Ticket Booking</h4>
+								<h4 class="text-white">Smart Ride Connect</h4>
 								<p>
-								BUS Tickets is the largest online bus ticket booking service in the world. Trusted by more than 8 million customers globally. Bus Tickets offers booking bus tickets through the website.
+								BUS Tickets is the largest online Smart Ride Connect service in the world. Trusted by more than 8 million customers globally. Bus Tickets offers booking bus tickets through the website.
 								</p>
 							</div>
 						</div>
@@ -45,7 +45,7 @@
 					</div>
 					<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            <p class="footer-text m-0"><span>&copy; <?= date('Y') ?> Bus Ticket Booking System</span> </p>
+            <p class="footer-text m-0"><span>&copy; <?= date('Y') ?> Smart Ride Connect</span> </p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 			<!-- Log on to codeastro.com for more projects -->
 						<!-- <div class="footer-social d-flex align-items-center">

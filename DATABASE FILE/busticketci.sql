@@ -90,11 +90,11 @@ CREATE TABLE `tbl_bank` (
 --
 
 INSERT INTO `tbl_bank` (`kd_bank`, `nasabah_bank`, `nama_bank`, `nomrek_bank`, `photo_bank`) VALUES
-('BNK0001', 'DMB', 'Dominion Bank', '600000521', 'assets/frontend/img/bank/dominionbank.png'),
-('BNK0002', 'BVB', 'BlueValley Bank', '107556540', 'assets/frontend/img/bank/bvbank.png'),
-('BNK0003', 'CBK', 'Clover Bank', '800140000', 'assets/frontend/img/bank/cloverbank.png'),
-('BNK0004', 'WVB', 'WestView Bank', '300124589', 'assets/frontend/img/bank/wvbank.png'),
-('BNK0005', 'None', 'Celestial Bank', '100025001', '/assets/frontend/img/bank/celestialsbank.png');
+('BNK0001', 'DMB', 'HDFC Bank', '600000521', 'assets/frontend/img/bank/dominionbank.png'),
+('BNK0002', 'BVB', 'SBI Bank', '107556540', 'assets/frontend/img/bank/bvbank.png'),
+('BNK0003', 'CBK', 'KVB Bank', '800140000', 'assets/frontend/img/bank/cloverbank.png'),
+('BNK0004', 'WVB', 'Canara Bank', '300124589', 'assets/frontend/img/bank/wvbank.png'),
+('BNK0005', 'None', 'ICICI Bank', '100025001', '/assets/frontend/img/bank/celestialsbank.png');
 
 -- --------------------------------------------------------
 
@@ -148,30 +148,30 @@ CREATE TABLE `tbl_jadwal` (
 --
 
 INSERT INTO `tbl_jadwal` (`kd_jadwal`, `kd_bus`, `kd_tujuan`, `kd_asal`, `wilayah_jadwal`, `jam_berangkat_jadwal`, `jam_tiba_jadwal`, `harga_jadwal`) VALUES
-('J0001', 'B001', 'TJ010', 'TJ019', 'Agocaster', '07:00:00', '11:15:00', '68'),
-('J0002', 'B009', 'TJ008', 'TJ010', 'Crenton', '09:00:00', '01:50:00', '75'),
-('J0003', 'B002', 'TJ012', 'TJ011', 'Yloumore', '11:30:00', '05:30:00', '89'),
-('J0004', 'B001', 'TJ019', 'TJ007', 'Adenabert', '09:00:00', '10:30:00', '29'),
-('J0005', 'B005', 'TJ014', 'TJ016', 'Wromburg', '08:00:00', '11:45:00', '40'),
-('J0006', 'B001', 'TJ012', 'TJ010', 'Yloumore', '08:30:00', '04:15:00', '109'),
-('J0007', 'B003', 'TJ017', 'TJ019', 'Inasbridge', '10:00:00', '11:00:00', '17'),
-('J0008', 'B009', 'TJ009', 'TJ008', 'Rocvale', '08:45:00', '01:55:00', '47'),
-('J0009', 'B002', 'TJ019', 'TJ007', 'Adenabert', '09:45:00', '11:45:00', '33'),
-('J0010', 'B006', 'TJ013', 'TJ015', 'Prifpus', '07:30:00', '02:00:00', '64'),
-('J0011', 'B001', 'TJ008', 'TJ016', 'Crenton', '09:00:00', '11:45:00', '28'),
-('J0012', 'B005', 'TJ017', 'TJ012', 'Inasbridge', '08:45:00', '11:50:00', '40'),
-('J0013', 'B003', 'TJ019', 'TJ014', 'Adenabert', '09:00:00', '04:15:00', '82'),
-('J0014', 'B001', 'TJ017', 'TJ013', 'Inasbridge', '07:30:00', '06:00:00', '119'),
-('J0015', 'B005', 'TJ019', 'TJ013', 'Adenabert', '10:45:00', '02:45:00', '40'),
-('J0016', 'B005', 'TJ010', 'TJ013', 'Agocaster', '09:15:00', '01:00:00', '30'),
-('J0017', 'B004', 'TJ017', 'TJ009', 'Inasbridge', '08:50:00', '01:55:00', '59'),
-('J0018', 'B007', 'TJ017', 'TJ015', 'Inasbridge', '09:00:00', '11:30:00', '27'),
-('J0019', 'B009', 'TJ019', 'TJ015', 'Adenabert', '08:30:00', '11:50:00', '39'),
-('J0020', 'B009', 'TJ012', 'TJ015', 'Yloumore', '10:30:00', '03:10:00', '57'),
-('J0021', 'B008', 'TJ016', 'TJ018', 'Sledmouth', '08:45:00', '01:00:00', '53'),
-('J0022', 'B006', 'TJ019', 'TJ016', 'Adenabert', '06:30:00', '09:45:00', '38'),
-('J0023', 'B002', 'TJ010', 'TJ018', 'Agocaster', '07:00:00', '11:55:00', '42'),
-('J0024', 'B002', 'TJ016', 'TJ008', 'Sledmouth', '08:00:00', '10:30:00', '30');
+('J0001', 'B001', 'TJ010', 'TJ019', 'Chennai', '07:00:00', '11:15:00', '68'),
+('J0002', 'B009', 'TJ008', 'TJ010', 'Bangalore', '09:00:00', '01:50:00', '75'),
+('J0003', 'B002', 'TJ012', 'TJ011', 'Trichy', '11:30:00', '05:30:00', '89'),
+('J0004', 'B001', 'TJ019', 'TJ007', 'Karur', '09:00:00', '10:30:00', '29'),
+('J0005', 'B005', 'TJ014', 'TJ016', 'Coimbatore', '08:00:00', '11:45:00', '40'),
+('J0006', 'B001', 'TJ012', 'TJ010', 'Chennai', '08:30:00', '04:15:00', '109'),
+('J0007', 'B003', 'TJ017', 'TJ019', 'Krishnagiri', '10:00:00', '11:00:00', '17'),
+('J0008', 'B009', 'TJ009', 'TJ008', 'Salem', '08:45:00', '01:55:00', '47'),
+('J0009', 'B002', 'TJ019', 'TJ007', 'Kanniyakumari', '09:45:00', '11:45:00', '33'),
+('J0010', 'B006', 'TJ013', 'TJ015', 'Musiri', '07:30:00', '02:00:00', '64'),
+('J0011', 'B001', 'TJ008', 'TJ016', 'Karur', '09:00:00', '11:45:00', '28'),
+('J0012', 'B005', 'TJ017', 'TJ012', 'Tambaram', '08:45:00', '11:50:00', '40'),
+('J0013', 'B003', 'TJ019', 'TJ014', 'Hosur', '09:00:00', '04:15:00', '82'),
+('J0014', 'B001', 'TJ017', 'TJ013', 'Bangalore', '07:30:00', '06:00:00', '119'),
+('J0015', 'B005', 'TJ019', 'TJ013', 'Salem', '10:45:00', '02:45:00', '40'),
+('J0016', 'B005', 'TJ010', 'TJ013', 'Chennai', '09:15:00', '01:00:00', '30'),
+('J0017', 'B004', 'TJ017', 'TJ009', 'Vellor', '08:50:00', '01:55:00', '59'),
+('J0018', 'B007', 'TJ017', 'TJ015', 'Vandalur', '09:00:00', '11:30:00', '27'),
+('J0019', 'B009', 'TJ019', 'TJ015', 'Bangalore', '08:30:00', '11:50:00', '39'),
+('J0020', 'B009', 'TJ012', 'TJ015', 'Hosur', '10:30:00', '03:10:00', '57'),
+('J0021', 'B008', 'TJ016', 'TJ018', 'Musiri', '08:45:00', '01:00:00', '53'),
+('J0022', 'B006', 'TJ019', 'TJ016', 'Chennai', '06:30:00', '09:45:00', '38'),
+('J0023', 'B002', 'TJ010', 'TJ018', 'Coimbatore', '07:00:00', '11:55:00', '42'),
+('J0024', 'B002', 'TJ016', 'TJ008', 'Hosur', '08:00:00', '10:30:00', '30');
 
 -- --------------------------------------------------------
 
@@ -194,17 +194,17 @@ CREATE TABLE `tbl_konfirmasi` (
 --
 
 INSERT INTO `tbl_konfirmasi` (`kd_konfirmasi`, `kd_order`, `nama_konfirmasi`, `nama_bank_konfirmasi`, `norek_konfirmasi`, `total_konfirmasi`, `photo_konfirmasi`) VALUES
-('KF0001', 'ORD00001', 'Ellen', 'New Leaf Bank', '197777450', '68', '/assets/frontend/upload/payment/sample_image.jpg'),
-('KF0002', 'ORD00002', 'Andie Sand', 'RoyalCrown Bank', '701111458', '68', '/assets/frontend/upload/payment/sample_image.jpg'),
-('KF0003', 'ORD00004', 'Delbert', 'New Leaf Bank', '1000008569', '40', '/assets/frontend/upload/payment/sample_image.jpg'),
-('KF0004', 'ORD00005', 'Ruth Russo', 'Aurora', '001114547', '178', '/assets/frontend/upload/payment/sample_image.jpg'),
-('KF0005', 'ORD00006', 'Carl J. Montoya', 'RoyalCrown Bank', '100045855', '68', '/assets/frontend/upload/payment/sample_image.jpg'),
-('KF0006', 'ORD00007', 'Diana Kirk', 'Zenith Bank', '1007452', '40', '/assets/frontend/upload/payment/sample_image.jpg'),
-('KF0007', 'ORD00008', 'Agnes Wonka', 'Aurora', '20145002', '59', '/assets/frontend/upload/payment/sample_image.jpg'),
-('KF0008', 'ORD00009', 'Mary Smith', 'Zenith Bank', '0144520', '64', '/assets/frontend/upload/payment/sample_image.jpg'),
-('KF0009', 'ORD00010', 'Thomas Ford', 'RoyalCrown Bank', '100045802', '82', '/assets/frontend/upload/payment/sample_image.jpg'),
-('KF0010', 'ORD00012', 'Steven Bast', 'Zenith Bank', '10102257', '75', '/assets/frontend/upload/payment/sample_image.jpg'),
-('KF0011', 'ORD00013', 'Will Williams', 'New Leaf Bank', '1000478', '75', '/assets/frontend/upload/payment/sample_image.jpg');
+('KF0001', 'ORD00001', 'Ellen', 'KVB Bank', '197777450', '68', '/assets/frontend/upload/payment/sample_image.jpg'),
+('KF0002', 'ORD00002', 'Andie Sand', 'SBI Bank', '701111458', '68', '/assets/frontend/upload/payment/sample_image.jpg'),
+('KF0003', 'ORD00004', 'Delbert', 'KVB Bank', '1000008569', '40', '/assets/frontend/upload/payment/sample_image.jpg'),
+('KF0004', 'ORD00005', 'Ruth Russo', 'Canara', '001114547', '178', '/assets/frontend/upload/payment/sample_image.jpg'),
+('KF0005', 'ORD00006', 'Carl J. Montoya', 'SBI Bank', '100045855', '68', '/assets/frontend/upload/payment/sample_image.jpg'),
+('KF0006', 'ORD00007', 'Diana Kirk', 'ICICI Bank', '1007452', '40', '/assets/frontend/upload/payment/sample_image.jpg'),
+('KF0007', 'ORD00008', 'Agnes Wonka', 'Canara', '20145002', '59', '/assets/frontend/upload/payment/sample_image.jpg'),
+('KF0008', 'ORD00009', 'Mary Smith', 'ICICI Bank', '0144520', '64', '/assets/frontend/upload/payment/sample_image.jpg'),
+('KF0009', 'ORD00010', 'Thomas Ford', 'SBI Bank', '100045802', '82', '/assets/frontend/upload/payment/sample_image.jpg'),
+('KF0010', 'ORD00012', 'Steven Bast', 'ICICI Bank', '10102257', '75', '/assets/frontend/upload/payment/sample_image.jpg'),
+('KF0011', 'ORD00013', 'Will Williams', 'KVB Bank', '1000478', '75', '/assets/frontend/upload/payment/sample_image.jpg');
 
 -- --------------------------------------------------------
 
@@ -445,29 +445,27 @@ INSERT INTO `tbl_token_pelanggan` (`kd_token`, `nama_token`, `email_token`, `dat
 
 CREATE TABLE `tbl_tujuan` (
   `kd_tujuan` varchar(50) NOT NULL,
-  `kota_tujuan` varchar(50) NOT NULL,
-  `nama_terminal_tujuan` varchar(50) NOT NULL,
-  `terminal_tujuan` varchar(100) NOT NULL
+  `kota_tujuan` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_tujuan`
 --
 
-INSERT INTO `tbl_tujuan` (`kd_tujuan`, `kota_tujuan`, `nama_terminal_tujuan`, `terminal_tujuan`) VALUES
-('TJ007', 'Onabridge', '', 'Neo Terminal'),
-('TJ008', 'Crenton', '', 'MicM Terminal'),
-('TJ009', 'Rocvale', '', 'ZX Terminal'),
-('TJ010', 'Agocaster', '', 'Caster Terminal'),
-('TJ011', 'Yhixport', '', 'Hixport Terminal'),
-('TJ012', 'Yloumore', '', 'Loum Terminal'),
-('TJ013', 'Prifpus', '', 'Pusf Terminal'),
-('TJ014', 'Wromburg', '', 'Wrom Terminal'),
-('TJ015', 'Ofruaswood', '', 'Ofruas Terminal'),
-('TJ016', 'Sledmouth', '', 'Sled Terminal'),
-('TJ017', 'Inasbridge', '', 'IB Terminal'),
-('TJ018', 'Owodon', '', 'OD Terminal'),
-('TJ019', 'Adenabert', '', 'AB Terminal');
+INSERT INTO `tbl_tujuan` (`kd_tujuan`, `kota_tujuan`) VALUES
+('TJ007', 'Hosur'),
+('TJ008', 'Coimbatore'),
+('TJ009', 'Erode'),
+('TJ010', 'Chennai'),
+('TJ011', 'Krishnagiri'),
+('TJ012', 'Thirupur'),
+('TJ013', 'Thambaram'),
+('TJ014', 'Kanniyakumari'),
+('TJ015', 'Coimbatore'),
+('TJ016', 'Musiri'),
+('TJ017', 'Trichy'),
+('TJ018', 'Karur'),
+('TJ019', 'Erode');
 
 --
 -- Indexes for dumped tables

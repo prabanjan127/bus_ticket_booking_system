@@ -44,11 +44,11 @@
 										<label for="exampleInputEmail1">Your BANK</label>
 										<select class="form-control" name="bank_km">
 											<option value="" selected disabled="">Select Bank</option>
-											<option value="New Leaf Bank" >New Leaf Bank</option>
-											<option value="Zenith Bank">Zenith Bank</option>
-											<option value="WestView Bank">WestView Bank</option>
-											<option value="Aurora">Aurora</option>
-											<option value="RoyalCrown Bank">RoyalCrown Bank</option>
+											<option value="New Leaf Bank" >HDFC Bank</option>
+											<option value="Zenith Bank">SBI Bank</option>
+											<option value="WestView Bank">KVB Bank</option>
+											<option value="Aurora">Canara Bank</option>
+											<option value="RoyalCrown Bank">ICICI Bank</option>
 										</select>
 										<!-- Log on to codeastro.com for more projects -->
 										<!-- <select class="form-control" name="bank" required>
